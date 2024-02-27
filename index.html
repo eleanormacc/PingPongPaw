@@ -32,24 +32,30 @@
     <p> Control left Player by using up and down arrow keys.</p>
     <script src="./script.js"></script>
 
-    <button id="play">Play</button>
-    
 <button id="play">Play</button>
+<button id="pause" style="display:none;">Pause</button>
+
 <script>
-    let play = document.getElementById("play");
-    let audio = new Audio("https://www.youtube.com/watch?v=hrgzWEgCCFg");
-    function playMusic() {
-        if (audio.paused) {
-            audio.play();
-            play.innerHTML = "Pause";
-        } else {
-            audio.pause();
-            audio.currentTime = 0;
-            play.innerHTML = "Play";
-        }
-    }
-    play.addEventListener("click", playMusic);
+  let play = document.getElementById("play");
+  let pause = document.getElementById("pause");
+  let audio = new Audio("https://www.youtube.com/watch?v=hrgzWEgCCFg");
+
+  function playMusic() {
+    play.style.display = "none";
+    pause.style.display = "block";
+    audio.play();
+  }
+
+  function pauseMusic() {
+    play.style.display = "block";
+    pause.style.display = "none";
+    audio.pause();
+  }
+
+  play.addEventListener("click", playMusic);
+  pause.addEventListener("click", pauseMusic);
 </script>
+    
 </script>
 </body>
 </html>
