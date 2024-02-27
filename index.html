@@ -36,8 +36,10 @@
         <script>
             let audio = document.getElementById("audio");
             function playMusic() {
-                let audio = Audio("");
+                let audio = new Audio("noCopyRightGameMusic.mp3");
+                    audio.play()
             }
+            play.addEventListener("click", playMusic);
         </script>
 </body>
 </html>
