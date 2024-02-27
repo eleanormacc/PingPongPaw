@@ -8,7 +8,7 @@ var DIRECTION = {
 };
  
 var rounds = [5, 5, 3, 3, 2];
-var colors = ['#FFE0EE', '#FFB3D5', '#FF7DB7', '#FF4598', '#FF0072']; //increasing intensity of pink
+var colors = ['#ffe0ee', '#ffb3d5', '#ff7db7', '#ff4598', '#ff0072']; //increasing intensity of pink
  
 // The ball object (The cube that bounces back and forth)
 var Ball = {
