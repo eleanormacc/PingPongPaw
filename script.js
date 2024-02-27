@@ -1,4 +1,4 @@
-// Global Variables
+// General Variables
 var DIRECTION = {
     IDLE: 0,
     UP: 1,
@@ -8,7 +8,7 @@ var DIRECTION = {
 };
  
 var rounds = [5, 5, 3, 3, 2];
-var colors = ['#ffe0ee', '#ffb3d5', '#ff7db7', '#ff4598', '#ff0072']; //increasing intensity of pink
+var colors = ['#ff0072', '#ff4598', '#ff7db7', '#ffb3d5',  '#ffe0ee']; //increasing intensity of pink
  
 // The ball object (The cube that bounces back and forth)
 var Ball = {
@@ -67,7 +67,7 @@ var Game = {
  
     endGameMenu: function (text) {
         // Change the canvas font size and color
-        Pong.context.font = '45px Courier New';
+        Pong.context.font = '45px Arial';
         Pong.context.fillStyle = this.color;
  
         // Draw the rectangle behind the 'Press any key to begin' text.
@@ -270,7 +270,7 @@ var Game = {
         this.context.stroke();
  
         // Set the default canvas font and align it to the center
-        this.context.font = '100px Courier New';
+        this.context.font = '100px Arial';
         this.context.textAlign = 'center';
  
         // Draw the players score (left)
@@ -288,7 +288,7 @@ var Game = {
         );
  
         // Change the font size for the center score text
-        this.context.font = '30px Courier New';
+        this.context.font = '30px Arial';
  
         // Draw the winning score (center)
         this.context.fillText(
@@ -298,7 +298,7 @@ var Game = {
         );
  
         // Change the font size for the center score value
-        this.context.font = '40px Courier';
+        this.context.font = '40px Arial';
  
         // Draw the current round number
         this.context.fillText(
